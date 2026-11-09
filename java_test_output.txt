@@ -1,0 +1,18 @@
+ID    | Input                                            | Expected                 | Actual                   | Result
+-----------------------------------------------------------------------------------------------------------------------------
+T1    | Login with wrong password                        | false                    | false                    | PASS
+T2    | Register without logging in                      | IllegalStateException    | IllegalStateException    | PASS
+T3    | Login OK, fees cleared, course open              | ACTIVE                   | ACTIVE                   | PASS
+T4    | Login OK, fee balance 30000 outstanding          | IllegalStateException    | IllegalStateException    | PASS
+T5    | Register for same course twice                   | IllegalStateException    | IllegalStateException    | PASS
+T6    | Register when course capacity = 0                | IllegalStateException    | IllegalStateException    | PASS
+T7    | After T3, course enrolled-student count          | 1                        | 1                        | PASS
+T8    | Assigned lecturer enters 78                      | A                        | A                        | PASS
+T9    | Lecturer enters score 105 (invalid)              | IllegalArgumentException | IllegalArgumentException | PASS
+T10   | Lecturer NOT assigned to course enters marks     | SecurityException        | SecurityException        | PASS
+T11   | Score 40 -> grade (boundary)                     | D                        | D                        | PASS
+T12   | Score 39.9 -> grade (boundary)                   | E                        | E                        | PASS
+T13   | Student views results before board approval      | 0                        | 0                        | PASS
+T14   | Board approves, student views results            | 1                        | 1                        | PASS
+-----------------------------------------------------------------------------------------------------------------------------
+Passed 14 of 14

@@ -1,0 +1,18 @@
+Polymorphism: getDashboard() on User references
+  Student Portal: Teckla Ndanu | Units: 0
+  Lecturer Portal: Dr. Omol | Courses taught: 1
+  Admin Console: Exam Board | Access: FULL
+
+USE CASE 1: Student registers for a unit
+  Blocked: Fee balance not cleared: 50000.0
+  Statement F001 | Total: 50000.00 | Paid: 50000.00 | Balance: 0.00 | Due: 2026-11-01
+  [SMS to 0700111222] Registration confirmed: You are registered for CPP6101 - Object Oriented Technologies
+  Enrollment ENR-22/05701-CPP6101 status: ACTIVE
+  Students in CPP6101: 1
+
+USE CASE 2: Enter and approve student marks
+  Entered: CAT 1: 78.0 (A) [pending approval]
+  Student sees 0 result(s) before approval
+  [EMAIL to 2205701@students.kcau.ac.ke] Results published: 1 result(s) for CPP6101 are now available
+  Board published 1 result(s)
+  Student now sees: [CAT 1: 78.0 (A)]
