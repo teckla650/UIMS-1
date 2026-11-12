@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * An academic department. It groups courses and lecturers (aggregation):
- * both can exist without the department object.
- */
+/**An academic department. It groups courses and lecturers (aggregation): both can exist without the department object.*/
 public class Department {
     private final String departmentId;
     private String name;

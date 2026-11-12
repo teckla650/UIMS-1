@@ -4,11 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- * Base class for everyone who logs in to the system.
- * Student, Lecturer and Administrator extend it, so identity and session
- * behaviour is written once.
- */
+//Base class for everyone who logs in to the system. Student, Lecturer and Administrator extend it, so identity and session behaviour is written once.//
 public abstract class User {
     private final String userId;
     private String fullName;
@@ -18,12 +14,7 @@ public abstract class User {
     private final Role role;
     private boolean loggedIn;
 
-    /**
-     * Creates a user who is not yet logged in. The password is hashed here
-     * and the plain text is never kept.
-     *
-     * @param role the role fixed by the subclass (STUDENT, LECTURER or ADMINISTRATOR)
-     */
+    // Creates a user who is not yet logged in. The password is hashed here and the plain text is never kept. @param role the role fixed by the subclass (STUDENT, LECTURER or ADMINISTRATOR)//
     protected User(String userId, String fullName, String email,
                    String password, String phoneNumber, Role role) {
         this.userId = userId;

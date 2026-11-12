@@ -3,10 +3,7 @@ package uims;
 import java.time.LocalDate;
 import java.util.function.Supplier;
 
-/**
- * Runs the 14 manual test cases for the two use cases and prints a results table.
- * No test library is needed. Run with: java -cp out uims.TestRunner
- */
+/**Runs the 14 manual test cases for the two use cases and prints a results table. No test library is needed. Run with: java -cp out uims.TestRunner*/
 public class TestRunner {
     static int passed = 0, total = 0;
 

@@ -10,11 +10,7 @@ public class Student extends User {
     private final FeeStatement feeStatement;
     private final List<Enrollment> enrollments = new ArrayList<>();
 
-    /**
-     * Creates a student with the STUDENT role.
-     *
-     * @param feeStatement this student's fee record
-     */
+    // Creates a student with the STUDENT role. @param feeStatement this student's fee record//
     public Student(String userId, String fullName, String email, String password,
                    String phoneNumber, String admissionNumber, FeeStatement feeStatement) {
         super(userId, fullName, email, password, phoneNumber, Role.STUDENT);
@@ -22,18 +18,8 @@ public class Student extends User {
         this.feeStatement = feeStatement;
     }
 
-    /**
-     * Use case 1: the student registers for a unit.
-     * The checks run in this order: login, fees, duplicate registration, capacity.
-     * If all pass, an Enrollment is created and the student is notified.
-     *
-     * @param course   the course to register for
-     * @param semester the semester label, for example "Sem 1"
-     * @param notifier how the confirmation is sent
-     * @return the new enrollment
-     * @throws IllegalStateException if the student is not logged in, has an
-     *                               outstanding balance, is already registered, or the course is full
-     */
+    // Use case 1: the student registers for a unit. The checks run in this order: login, fees, duplicate registration, capacity. If all pass, an Enrollment is created and the student is notified.
+    //
     public Enrollment registerForCourse(Course course, String semester, Notification notifier) {
         if (!isLoggedIn())
             throw new IllegalStateException("Student must log in first");

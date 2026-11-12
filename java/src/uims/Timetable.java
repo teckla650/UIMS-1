@@ -3,10 +3,7 @@ package uims;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
-/**
- * One scheduled class slot for a course. Students only see it after an
- * administrator publishes it.
- */
+/**One scheduled class slot for a course. Students only see it after an administrator publishes it.*/
 public class Timetable {
     private final String timetableId;
     private final Course course;
@@ -17,11 +14,7 @@ public class Timetable {
     private Administrator publishedBy;
     private boolean published;
 
-    /**
-     * Creates an unpublished slot.
-     *
-     * @throws IllegalArgumentException if the end time is not after the start time
-     */
+    /**Creates an unpublished slot */
     public Timetable(String timetableId, Course course, DayOfWeek dayOfWeek,
                      LocalTime startTime, LocalTime endTime, String room) {
         if (!endTime.isAfter(startTime))

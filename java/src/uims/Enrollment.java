@@ -5,10 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Links one Student to one Course. It also owns the student's results for that
- * course (composition): results are created here and cannot exist without it.
- */
+/**Links one Student to one Course. It also owns the student's results for that course (composition): results are created here and cannot exist without it */
 public class Enrollment {
     private final String enrollmentId;
     private final Student student;

@@ -29,19 +29,7 @@ public class Lecturer extends User {
         this.department = department;
     }
 
-    /**
-     * Use case 2, part 1: the lecturer enters marks.
-     * The checks run in this order: login, assigned to the course, enrollment active.
-     * The result is saved as pending until an Administrator approves it.
-     *
-     * @param enrollment     the student's enrollment in the course
-     * @param assessmentType for example "CAT 1"
-     * @param score          a score from 0 to 100
-     * @return the new, unpublished result
-     * @throws IllegalStateException    if the lecturer is not logged in or the enrollment is not active
-     * @throws SecurityException        if the lecturer is not assigned to the course
-     * @throws IllegalArgumentException if the score is outside 0 to 100
-     */
+    /**Use case 2, part 1: the lecturer enters marks.The checks run in this order: login, assigned to the course, enrollment active.The result is saved as pending until an Administrator approves it.*/
     public StudentResult enterMarks(Enrollment enrollment, String assessmentType, double score) {
         if (!isLoggedIn())
             throw new IllegalStateException("Lecturer must log in first");

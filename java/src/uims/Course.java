@@ -18,11 +18,7 @@ public class Course {
     private final List<Enrollment> enrollments = new ArrayList<>();
     private final List<Timetable> timetable = new ArrayList<>();
 
-    /**
-     * Creates a course with no lecturer, department or students yet.
-     *
-     * @param capacity the most students that may enrol
-     */
+    /**Creates a course with no lecturer, department or students yet. */
     public Course(String courseId, String courseCode, String courseName, int creditUnits, int capacity) {
         this.courseId = courseId;
         this.courseCode = courseCode;

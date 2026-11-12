@@ -2,22 +2,14 @@ package uims;
 
 import java.time.LocalDate;
 
-/**
- * A student's fee record. The balance is calculated from the total and the
- * amount paid, so no other class can set it directly.
- */
+/**A student's fee record. The balance is calculated from the total and the amount paid, so no other class can set it directly.*/
 public class FeeStatement {
     private final String statementId;
     private final double totalAmount;
     private double amountPaid;
     private final LocalDate dueDate;
 
-    /**
-     * Creates a statement with nothing paid yet.
-     *
-     * @param totalAmount the total fees charged
-     * @param dueDate     the date the fees must be cleared by
-     */
+    /**Creates a statement with nothing paid yet.*/
     public FeeStatement(String statementId, double totalAmount, LocalDate dueDate) {
         this.statementId = statementId;
         this.totalAmount = totalAmount;
@@ -25,12 +17,7 @@ public class FeeStatement {
         this.dueDate = dueDate;
     }
 
-    /**
-     * Records a payment.
-     *
-     * @param amount the amount paid, which must be greater than zero
-     * @throws IllegalArgumentException if the amount is zero or negative
-     */
+    /**Records a payment.*/
     public void recordPayment(double amount) {
         if (amount <= 0) throw new IllegalArgumentException("Payment must be greater than zero");
         amountPaid += amount;

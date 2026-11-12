@@ -4,26 +4,14 @@ package uims;
 public class Administrator extends User {
     private String accessLevel;
 
-    /**
-     * Creates an administrator with the ADMINISTRATOR role.
-     *
-     * @param accessLevel for example "FULL"
-     */
+    /**Creates an administrator with the ADMINISTRATOR role. */
     public Administrator(String userId, String fullName, String email, String password,
                          String phoneNumber, String accessLevel) {
         super(userId, fullName, email, password, phoneNumber, Role.ADMINISTRATOR);
         this.accessLevel = accessLevel;
     }
 
-    /**
-     * Use case 2, part 2: the administrator approves marks.
-     * Every pending result in the enrollment is published, then the student is notified.
-     *
-     * @param enrollment the enrollment whose results are approved
-     * @param notifier   how the student is told
-     * @return how many results were published
-     * @throws IllegalStateException if the administrator is not logged in
-     */
+    /**Use case 2, part 2: the administrator approves marks. Every pending result in the enrollment is published, then the student is notified.*/
     public int approveResults(Enrollment enrollment, Notification notifier) {
         if (!isLoggedIn())
             throw new IllegalStateException("Administrator must log in first");
@@ -41,11 +29,7 @@ public class Administrator extends User {
         return count;
     }
 
-    /**
-     * Makes a timetable slot visible to students.
-     *
-     * @throws IllegalStateException if the administrator is not logged in
-     */
+    /**Makes a timetable slot visible to students.*/
     public void publishTimetable(Timetable slot) {
         slot.publish(this);
     }
